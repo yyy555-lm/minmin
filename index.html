@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#FF6B8A" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
     <title>敏敏 - 我们的情侣空间</title>
     <style>
       body { margin: 0; background: #FFF5F7; }
@@ -17,7 +17,7 @@
     <script>
       window.__updateReady = false
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then((reg) => {
+        navigator.serviceWorker.register('./sw.js').then((reg) => {
           navigator.serviceWorker.addEventListener('message', (e) => {
             if (e.data?.type === 'UPDATE_READY') {
               window.__updateReady = true
